@@ -1,0 +1,27 @@
+version: '1.0'
+
+name: 'ecommerce-app'
+
+services:
+  mongo:
+    image: mongo
+    restart: 'always'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: Amir248625
+    ports:
+      - "27017:27017"
+    volumes:
+      - 
+
+  website:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./app:/app/app
+      - ./public:/app/public
+    ports:
+      - ${PORT:-3000}:3000
+    depends_on:
+      - mongo
