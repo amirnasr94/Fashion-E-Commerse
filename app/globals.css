@@ -2,25 +2,117 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --white: #ffffff;
+  --black: #0c0c0c;
+  --primary: #748c70;
+  --font-family: var(--font-montserrat);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --primary-900: #0d100c;
+  --primary-800: #272f25;
+  --primary-750: #343e32;
+  --primary-700: #404e3e;
+  --primary-600: #5a6d57;
+  --primary-500: var(--primary);
+  --primary-400: #839980;
+  --primary-300: #93a690;
+  --primary-200: #93a690;
+  --primary-100: #b2bfaf;
+  --primary-50: #d1d9cf;
+  --primary-25: #f0f2ef;
+
+  --black: var(--black);
+  --white: var(--white);
+
+  --gray-202020: #202020;
+  --gray-404040: #404040;
+  --gray-606060: #606060;
+  --gray-868686: #868686;
+  --gray-ADADAD: #adadad;
+  --gray-CBCBCB: #cbcbcb;
+  --gray-DFDFDF: #dfdfdf;
+  --gray-EDEDED: #ededed;
+  --gray-F9F9F9: #f9f9f9;
+
+  --error: #c30000;
+  --error-bg: #fff2f2;
+
+  --warning: #e09126;
+  --warning-bg: #f7e4c9;
+
+  --success: #00966d;
+  --success-bg: #f3fdfa;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.display1 {
+  font-family: var(--font-family);
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.display2 {
+  font-family: var(--font-family);
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.display2 {
+  font-family: var(--font-family);
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.body-xl {
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.body-lg {
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.body-md {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.body-sm {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.body-xs {
+  font-family: var(--font-family);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.caption-lg {
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 800;
+}
+.caption-md {
+  font-family: var(--font-family);
+  font-size: 12;
+  font-weight: 400;
+}
+.caption-sm {
+  font-family: var(--font-family);
+  font-size: 10;
+  font-weight: 800;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-montserrat);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
