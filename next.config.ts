@@ -16,13 +16,13 @@ const nextConfig: NextConfig = {
             },
           },
         ],
-        as:'*.ts'
+        as: "*.ts",
       },
     },
   },
   experimental: {
     serverActions: {
-      allowedOrigins: ["rahava.net", "localhost:3000"],
+      allowedOrigins: ["localhost:3000"],
     },
   },
 };

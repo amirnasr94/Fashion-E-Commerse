@@ -10,18 +10,22 @@ services:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: Amir248625
     ports:
-      - "27017:27017"
+      - "27018:27017"
     volumes:
-      - 
+      - mongodb:/data/db
 
   website:
     build:
       context: .
       dockerfile: ./Dockerfile
     volumes:
-      - ./app:/app/app
-      - ./public:/app/public
+      - .:/app
+      - /app/node_modules
     ports:
       - ${PORT:-3000}:3000
+    environment:
+      - MONGODB_URI=mongodb://mongoadmin:Amir248625@mongo:27018/ecommerce?authSource=admin
     depends_on:
       - mongo
+volumes:
+  mongodb:
