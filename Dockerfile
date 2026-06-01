@@ -19,5 +19,7 @@ RUN \
 # copy the content of the local directory to the working directory
 COPY . .
 
+EXPOSE 3000
+
 # Start the app in development
 CMD ["yarn", "dev"]
