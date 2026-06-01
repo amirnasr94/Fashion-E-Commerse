@@ -25,6 +25,9 @@ const nextConfig: NextConfig = {
       allowedOrigins: ["localhost:3000"],
     },
   },
+  rewrites() {
+    return [{ source: "/", destination: "/" }];
+  },
 };
 
 export default nextConfig;
