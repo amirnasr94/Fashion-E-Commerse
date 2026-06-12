@@ -47,7 +47,8 @@ export default function RootLayout({
         />
         <link rel="shortcut icon" href="./favicon.ico" type="image/png" />
       </head>
-      <body className={`${montserrat.variable}`}>
+      <body className={`scrollbar-hide ${montserrat.variable}`}>
+        {/* <div className="pointer-events-none bg-gray-50 fixed inset-0 z-" /> */}
         <Header />
         {children}
         <Footer />

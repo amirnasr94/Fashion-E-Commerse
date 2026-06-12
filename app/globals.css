@@ -105,4 +105,20 @@ body {
     max-width: 1224px;
     margin: auto;
   }
+  body:has(.nav-item:hover) {
+    overflow: hidden;
+    height: 100vh;
+  }
+  .z-header {
+    z-index: 1000;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
 }
