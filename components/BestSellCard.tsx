@@ -19,11 +19,11 @@ function ColorBudget({ hex }: { hex: string }) {
       style={{ backgroundColor: hex }}
     />
   );
-} 
+}
 
 export default function BestSellCard({ data }: { data: Sell }) {
   return (
-    <figure className="space-y-1">
+    <figure className="space-y-2">
       <div className="h-[500] relative">
         <Image
           src={data.image}
@@ -33,7 +33,7 @@ export default function BestSellCard({ data }: { data: Sell }) {
           className="rounded-sm"
         />
       </div>
-      <div className="space-y-1">
+      <div className="space-y-2">
         <h6 className="text-black font-bold">{data.name}</h6>
         <div className="flex items-center justify-between">
           <span className="body-md text-black">{data.description}</span>

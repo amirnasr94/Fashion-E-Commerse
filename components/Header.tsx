@@ -1,7 +1,5 @@
 import NavBar from "./header/NavBar";
 
-export const fetchCache = "force-no-store";
-
 export default function Header() {
   return (
     <header className="z-header">
