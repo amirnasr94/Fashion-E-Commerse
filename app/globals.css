@@ -87,10 +87,42 @@ body {
 }
 
 @layer components {
+  h1 {
+    font-size: 44px;
+    font-weight: bold;
+    @apply max-lg:text-[24px];
+  }
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    @apply max-lg:text-body-xl;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: bold;
+    @apply max-lg:text-[16px];
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: bold;
+    @apply max-lg:text-[14px];
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: bold;
+    @apply max-lg:text-[12px];
+  }
+  h6 {
+    font-size: 16px;
+    font-weight: bold;
+    @apply max-lg:text-caption-sm;
+  }
+
   input,
   textarea,
   button,
-  a {
+  a,
+  .select {
     outline: none;
   }
   input,
@@ -104,6 +136,7 @@ body {
   .container {
     max-width: 1224px;
     margin: auto;
+    @apply max-lg:px-4;
   }
   body:has(.nav-item:hover) {
     overflow: hidden;
