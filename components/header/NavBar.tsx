@@ -18,13 +18,15 @@ export default function NavBar() {
     <div
       className={`grid grid-cols-3 bg-white h-[65] items-center transition-all duration-100 ${scrollY === 0 ? "top-[30]" : "fixed inset-x-0 top-0"} z-10`}
     >
-      <Image
-        src="/assets/images/Logo.png"
-        alt="modimal-logo"
-        className="mx-auto"
-        width={200}
-        height={100}
-      />
+      <Link href="/">
+        <Image
+          src="/assets/images/Logo.png"
+          alt="modimal-logo"
+          className="mx-auto"
+          width={200}
+          height={100}
+        />
+      </Link>
 
       <nav className="max-lg:hidden space-x-5 m-auto h-full">
         <ul className="*:hover:text-primary-400 *:h-full *:content-center flex gap-x-6 h-full">
