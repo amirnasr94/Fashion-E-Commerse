@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { PropsWithChildren, ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
 const theme = {
   white: "bg-white text-black",
@@ -10,27 +10,17 @@ const theme = {
 interface Props {
   className?: string;
   variant: keyof typeof theme;
-  endComponent?: ReactNode;
-  startComponent?: ReactNode;
 }
 
 export default function Button({
   children,
   className,
   variant,
-  startComponent,
-  endComponent,
 }: PropsWithChildren<Props>) {
   const style = clsx(
     theme[variant],
     "flex items-center justify-center",
     className,
   );
-  return (
-    <button className={style}>
-      {startComponent ? startComponent : null}
-      {children}
-      {endComponent ? endComponent : null}
-    </button>
-  );
+  return <button className={style}>{children}</button>;
 }
