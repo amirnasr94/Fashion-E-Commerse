@@ -1,13 +1,12 @@
-import React from "react";
 import SubMenu from "../SubMenu";
 import Image from "next/image";
 
 export default function SubMenuSustainability() {
   return (
     <SubMenu>
-      <SubMenu.MenuColumn title="sustainability ">
+      <SubMenu.MenuColumn title="Sustainability ">
         {[
-          { title: "mission", href: "#" },
+          { title: "mission", href: "/sustainably/mission" },
           { title: "processing", href: "#" },
           { title: "materials", href: "#" },
           { title: "packaging", href: "#" },

@@ -27,8 +27,8 @@ export default function SustainabilitySection() {
           Stylish sustainability in clothing promotes eco-friendly <br />{" "}
           choices for a greater future
         </p>
-        <Button className="gap-x-1 px-9 py-3 float-end">
-            <p>Sustainability</p>
+        <Button variant="white" className="gap-x-1 px-9 py-3 float-end">
+          Sustainability
           <PlusIcon width={14} height={14} />
         </Button>
       </div>
