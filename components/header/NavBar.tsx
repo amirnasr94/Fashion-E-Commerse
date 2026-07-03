@@ -26,7 +26,7 @@ export default function NavBar() {
         height={100}
       />
 
-      <nav className="space-x-5 m-auto h-full">
+      <nav className="max-lg:hidden space-x-5 m-auto h-full">
         <ul className="*:hover:text-primary-400 *:h-full *:content-center flex gap-x-6 h-full">
           <li className="group nav-item">
             <Link href={""} prefetch>

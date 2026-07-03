@@ -45,7 +45,7 @@ export default function Footer() {
             itemList={[
               { title: "Orders & Shipping", href: "" },
               { title: "Returns & Refunds", href: "" },
-              { title: "Contact Us", href: "" },
+              { title: "Contact Us", href: "contact-us" },
             ]}
           />
         </div>

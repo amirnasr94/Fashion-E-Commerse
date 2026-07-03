@@ -4,7 +4,9 @@ export default function Header() {
   return (
     <header className="z-header">
       <div className="bg-primary-600 text-center h-[30] content-center">
-        <h5 className="text-white">Enjoy Free Shipping On All Orders</h5>
+        <p className="text-white text-body-md">
+          Enjoy Free Shipping On All Orders
+        </p>
       </div>
       <NavBar />
     </header>

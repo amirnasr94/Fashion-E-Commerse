@@ -5,8 +5,6 @@ import HeroSection from "@/components/HeroSection";
 import ModiweekSection from "@/components/ModiweekSection";
 import SustainabilitySection from "@/components/SustainabilitySection";
 
-export const revalidate = 0;
-
 export default async function Home() {
   return (
     <main>
