@@ -1,32 +1,18 @@
-version: '1.0'
-
-name: 'ecommerce-app'
+version: "1.0"
 
 services:
-  mongo:
-    image: mongo
-    restart: 'always'
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: mongoadmin
-      MONGO_INITDB_ROOT_PASSWORD: Amir248625
-    ports:
-      - "27018:27017"
-    volumes:
-      - mongodb:/data/db
-
   website:
+    image: ecommerce/image
     build:
       context: .
       dockerfile: ./Dockerfile
+    container_name: ecommerce-website
     volumes:
       - .:/app
       - /app/node_modules
       # - /app/.next
     ports:
       - ${PORT:-3000}:3000
+    restart: unless-stopped
     environment:
-      - MONGODB_URI=mongodb://mongoadmin:Amir248625@mongo:27018/ecommerce?authSource=admin
-    depends_on:
-      - mongo
-volumes:
-  mongodb:
+      NODE_ENV: development
