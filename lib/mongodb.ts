@@ -8,7 +8,7 @@ if (!URL) {
 
 const client = new MongoClient(URL);
 
-const dbName = "Fashion-Ecommerce";
+const dbName = "fashion-ecommerce-website";
 
 export async function handleConnectedToMongo() {
   await client.connect();
